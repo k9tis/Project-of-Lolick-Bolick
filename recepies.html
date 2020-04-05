@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <title>Пищевод</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="index.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="header">
+        <nav class="navbar navbar-sticky navbar-expand-sm navbar-light bg-light"
+            style="background-color: white !important">
+            <a href="index.html"><img alt="Brand" class="img-responsive" src="img/logo.png" height="60px" width="70px"
+                    style="margin-right: 20px"></a>
+            <a class="navbar-brand" href="index.html" style="font-size: 1.7em">Пищевод</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav-item" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false" style="color: black">
+                            Рецепты
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="recepies.html">Все рецепты</a>
+                            <a class="dropdown-item" href="#">Первые блюда</a>
+                            <a class="dropdown-item" href="#">Основные блюда</a>
+                            <a class="dropdown-item" href="#">Закуски</a>
+                            <a class="dropdown-item" href="#">Десерты</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="authors.html">Авторы</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="body">
+        <div class="container" style="margin-top: 30px; width: 100%; background-color: aliceblue;">
+            <div id="add-card">
+                <div class="container" style="padding: 20px;">
+                    <div class="row justify-content-between">
+                        <button type="button" class="btn btn-success" data-toggle="modal"
+                            data-target="#exampleModalCenter">
+                            Добавить рецепт
+                        </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">Редактор рецептов</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <label for="">Напишите название Вашего рецепта</label>
+                                                <input type="text" class="form-control" name="" id=""
+                                                    aria-describedby="helpId" placeholder="Картошка с окрошкой">
+                                            </div>
+                                            <label for="">Опишите подробно весь рецепт</label>
+                                            <textarea class="form-control" name="" id="" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть
+                                            окно</button>
+                                        <button type="button" class="btn btn-success">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-success">Редактировать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" style="padding: 20px;">
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <img src="img/main_dish.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Какое-то блюдо</h5>
+                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-left: 20px;">
+                    <img src="img/entree.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Какое-то блюдо</h5>
+                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-left: 20px;">
+                    <img src="img/main_dish.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Какое-то блюдо</h5>
+                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                    <img src="img/main_dish.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Какое-то блюдо</h5>
+                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-left: 20px;">
+                    <img src="img/entree.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Какое-то блюдо</h5>
+                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                    </div>
+                </div>
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-left: 20px;">
+                    <img src="img/main_dish.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Какое-то блюдо</h5>
+                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <hr />
+            <div class="container">
+                <div class="row justifty-content-between text-center">
+                    <div class="col-sm">
+                        <hr class="footer-hr" />
+                        <a href="#">
+                            <h5>Главная</h5>
+                        </a>
+                        <a href="#">
+                            <h5>Рецепты</h5>
+                        </a>
+                        <a href="#">
+                            <h5>Авторы</h5>
+                        </a>
+                        <hr class="footer-hr" />
+                    </div>
+                    <div class="col-sm">
+                        <hr class="footer-hr" />
+                        <a href="#">
+                            <h5>Реклама</h5>
+                        </a>
+                        <a href="#">
+                            <h5>FAQ</h5>
+                        </a>
+                        <a href="#">
+                            <h5>(не придумали)
+                                <span class="badge badge-success">New</span>
+                            </h5>
+                        </a>
+                        <hr class="footer-hr" />
+                    </div>
+                    <div class="col-sm">
+                        <hr class="footer-hr" />
+                        <a href="#">
+                            <h5>Обратная связь</h5>
+                        </a>
+                        <a href="#">
+                            <h5>Группа Вконтакте</h5>
+                        </a>
+                        <a href="#">
+                            <h5>Канал Telegram</h5>
+                        </a>
+                        <hr class="footer-hr" />
+                    </div>
+                </div>
+            </div>
+            <div id="under">© Lolick-Bolick 2020 Inc. All right reserved</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
