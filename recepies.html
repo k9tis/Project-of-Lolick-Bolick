@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="index.css">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <script src="https://vk.com/js/api/openapi.js?167" type="text/javascript"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -45,17 +47,23 @@
                     </li>
                 </ul>
             </div>
+            <a href="#">
+                <div class="social vk"><i class="fab fa-vk fa-3x"></i></div>
+            </a>
+            <a href="#">
+                <div class="social tlg"><i class="fab fa-telegram-plane fa-3x"></i></div>
+            </a>
         </nav>
     </div>
 
     <div id="body">
-        <div class="container" style="margin-top: 30px; width: 100%; background-color: aliceblue;">
+        <div class="container" style="margin-top: 30px; width: 100%; background-color: aliceblue; margin-bottom: 20px;">
             <div id="add-card">
                 <div class="container" style="padding: 20px;">
                     <div class="row justify-content-between">
-                        <button type="button" class="btn btn-success" data-toggle="modal"
-                            data-target="#exampleModalCenter">
-                            Добавить рецепт
+                        <button type="button" class="btn btn-success" data-toggle="modal" title="Добавьте свой рецепт"
+                            data-target="#exampleModalCenter" id="example" data-placement="top">
+                            <i class="fas fa-plus"></i>
                         </button>
 
                         <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -87,82 +95,127 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-success">Редактировать</button>
+                        <button type="button" class="btn btn-success" data-toggle="modal"
+                            data-target="#exampleModalCenter1" title="Редактируйте свой рецепт">
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+
+                        <div class="modal fade bd-example-modal-lg" id="exampleModalCenter1" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalCenterTitle">Редактирование рецепта</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <label for="">Название</label>
+                                                <input type="text" class="form-control" name="" id=""
+                                                    aria-describedby="helpId" placeholder="Напишите новое название ">
+                                            </div>
+                                            <label for="">Описание</label>
+                                            <textarea class="form-control" name="" id="" rows="3"
+                                                placeholder="Напишите новое описание"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть
+                                            окно</button>
+                                        <button type="button" class="btn btn-success">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center" style="padding: 20px;">
+            <div class="row justify-content-center" style="padding: 5px;">
                 <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <img src="img/main_dish.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Какое-то блюдо</h5>
-                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
-                    </div>
+                    <a href="#" class="text-light">
+                        <img src="img/main_dish.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Какое-то блюдо</h5>
+                            <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-left: 20px;">
-                    <img src="img/entree.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Какое-то блюдо</h5>
-                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
-                    </div>
+                    <a href="#" class="text-light">
+                        <img src="img/entree.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Какое-то блюдо</h5>
+                            <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-left: 20px;">
-                    <img src="img/main_dish.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Какое-то блюдо</h5>
-                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
-                    </div>
+                    <a href="#" class="text-light">
+                        <img src="img/main_dish.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Какое-то блюдо</h5>
+                            <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                    <img src="img/main_dish.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Какое-то блюдо</h5>
-                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
-                    </div>
+                    <a href="#" class="text-light">
+                        <img src="img/main_dish.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Какое-то блюдо</h5>
+                            <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-left: 20px;">
-                    <img src="img/entree.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Какое-то блюдо</h5>
-                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
-                    </div>
+                    <a href="#" class="text-light">
+                        <img src="img/entree.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Какое-то блюдо</h5>
+                            <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="card text-white bg-success mb-3" style="max-width: 18rem; margin-left: 20px;">
-                    <img src="img/main_dish.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Какое-то блюдо</h5>
-                        <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
-                    </div>
+                    <a href="#" class="text-light">
+                        <img src="img/main_dish.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Какое-то блюдо</h5>
+                            <p class="card-text">Какое-то оооооооооочень длииииииииииииииннное описание</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-
         <div id="footer">
             <hr />
             <div class="container">
                 <div class="row justifty-content-between text-center">
                     <div class="col-sm">
                         <hr class="footer-hr" />
-                        <a href="#">
+                        <a href="index.html" class="f-links">
                             <h5>Главная</h5>
                         </a>
-                        <a href="#">
+                        <a href="recepies.html" class="f-links">
                             <h5>Рецепты</h5>
                         </a>
-                        <a href="#">
+                        <a href="authors.html" class="f-links">
                             <h5>Авторы</h5>
                         </a>
                         <hr class="footer-hr" />
                     </div>
                     <div class="col-sm">
                         <hr class="footer-hr" />
-                        <a href="#">
+                        <a href="#" class="f-links">
                             <h5>Реклама</h5>
                         </a>
-                        <a href="#">
+                        <a href="#" class="f-links">
                             <h5>FAQ</h5>
                         </a>
-                        <a href="#">
+                        <a href="#" class="f-links">
                             <h5>(не придумали)
                                 <span class="badge badge-success">New</span>
                             </h5>
@@ -171,13 +224,13 @@
                     </div>
                     <div class="col-sm">
                         <hr class="footer-hr" />
-                        <a href="#">
+                        <a href="#" class="f-links">
                             <h5>Обратная связь</h5>
                         </a>
-                        <a href="#">
+                        <a href="#" class="f-links">
                             <h5>Группа Вконтакте</h5>
                         </a>
-                        <a href="#">
+                        <a href="#" class="f-links">
                             <h5>Канал Telegram</h5>
                         </a>
                         <hr class="footer-hr" />
@@ -186,17 +239,17 @@
             </div>
             <div id="under">© Lolick-Bolick 2020 Inc. All right reserved</div>
         </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

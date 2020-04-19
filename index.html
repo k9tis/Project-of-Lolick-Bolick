@@ -8,12 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="index.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-
+    <div class="loaderArea">
+        <span class="sr-only" id="loader">Loading...</span>
+    </div>
     <div id="header">
         <nav class="navbar navbar-sticky navbar-expand-sm navbar-light bg-light"
             style="background-color: white !important">
@@ -42,9 +45,15 @@
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Авторы</a>
+                        <a class="nav-link" href="authors.html">Авторы</a>
                     </li>
                 </ul>
+                <a href="#">
+                    <div class="social vk"><i class="fab fa-vk fa-3x"></i></div>
+                </a>
+                <a href="#">
+                    <div class="social tlg"><i class="fab fa-telegram-plane fa-3x"></i></div>
+                </a>
             </div>
         </nav>
     </div>
@@ -98,7 +107,7 @@
                 </div>
             </a>
             <a href="#">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3" style="max-width: 540px; margin-left: 15px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <img src="img/entree.jpg" class="card-img" alt="Борщ" width="160px" height="150px">
@@ -132,7 +141,7 @@
                 </div>
             </a>
             <a href="#">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3" style="max-width: 540px; margin-left: 15px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
                             <img src="img/snaks.jpg" class="card-img" alt="Закуски" width="160px" height="150px">
@@ -174,26 +183,26 @@
             <div class="row justifty-content-between text-center">
                 <div class="col-sm">
                     <hr class="footer-hr" />
-                    <a href="index.html">
+                    <a href="index.html" class="f-links">
                         <h5>Главная</h5>
                     </a>
-                    <a href="recepies.html">
+                    <a href="recepies.html" class="f-links">
                         <h5>Рецепты</h5>
                     </a>
-                    <a href="authors.html">
+                    <a href="authors.html" class="f-links">
                         <h5>Авторы</h5>
                     </a>
                     <hr class="footer-hr" />
                 </div>
                 <div class="col-sm">
                     <hr class="footer-hr" />
-                    <a href="#">
+                    <a href="#" class="f-links">
                         <h5>Реклама</h5>
                     </a>
-                    <a href="#">
+                    <a href="#" class="f-links">
                         <h5>FAQ</h5>
                     </a>
-                    <a href="#">
+                    <a href="#" class="f-links">
                         <h5>(не придумали)
                             <span class="badge badge-success">New</span>
                         </h5>
@@ -202,13 +211,13 @@
                 </div>
                 <div class="col-sm">
                     <hr class="footer-hr" />
-                    <a href="#">
+                    <a href="#" class="f-links">
                         <h5>Обратная связь</h5>
                     </a>
-                    <a href="#">
+                    <a href="#" class="f-links">
                         <h5>Группа Вконтакте</h5>
                     </a>
-                    <a href="#">
+                    <a href="#" class="f-links">
                         <h5>Канал Telegram</h5>
                     </a>
                     <hr class="footer-hr" />
@@ -218,14 +227,19 @@
         <div id="under">© Lolick-Bolick 2020 Inc. All right reserved</div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script type="text/javascript">
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 </body>
 

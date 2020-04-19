@@ -37,7 +37,7 @@ a {
     color: black;
 }
 
-a:hover {
+.navbar-nav:hover {
     text-decoration: none;
     color: green;
 }
@@ -78,7 +78,7 @@ a:hover {
 
 .nav-link:hover,
 .nav-item:hover,
-.navbar-brand:hover, a:hover {
+.navbar-brand:hover, .col-md-8:hover, .f-links:hover, .dropdown-item:hover {
     color: #058105 !important;
 }
 
@@ -126,9 +126,10 @@ a:hover {
 }
 
 .carousel-indicators > li{
-  height: 6px;
+  height: 5px !important;
   width: 50px !important;
-  background-color: black !important;
+  border-radius: 10px !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .group-card {
@@ -151,6 +152,7 @@ a:hover {
 
 nav.navbar .dropdown:hover > .dropdown-menu {
   display: block; 
+  margin-top: -3px;
  }
  
 a {
@@ -167,4 +169,35 @@ a:hover {
 
 .card-title {
   font-weight: 400;
+}
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+  background-color: rgb(211, 211, 211, 0.2);
+}
+
+.social {
+  margin-left: 7px;
+  margin-right: 10px;
+  height: 65px;
+  width: 70px;
+  text-align: center;
+  padding-top: 9px;
+  border-radius: 9px;
+  transition: 1.3s;
+}
+
+.vk:hover {
+  background-color: #597ba0;
+}
+
+.tlg:hover {
+  background-color: #0088cc;
+}
+
+.vk:hover > .fa-vk {
+  color: white !important;
+}
+
+.tlg:hover > .fa-telegram-plane {
+  color: white !important;
 }
